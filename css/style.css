@@ -198,13 +198,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__burger-close {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  background: #00000000;
   display: none;
 }
 
@@ -1128,6 +1121,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header__burger-close {
     display: inline;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background: #00000000;
   }
   .header__menu-list {
     z-index: 5;
