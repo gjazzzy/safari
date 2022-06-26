@@ -1,0 +1,744 @@
+// Базовые настройки 
+@import 'reset'
+
+//Шрифты
+@import 'fonts'
+
+// Шапка 
+@import 'global'
+
+// адаптив
+@import 'media'
+
+// header
+.header
+    background: url('../image/content/header-bg.png')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    &__wrap
+        min-height: 100vh
+        justify-content: space-between
+        display: flex
+        flex-direction: column
+
+    &__top
+        display: flex
+        justify-content: space-between
+        padding: 16px 0
+        align-items: center
+        flex-wrap: wrap
+
+    &__phone
+        display: flex
+        align-items: center
+
+    &__cta
+        +bold
+        margin-right: 20px
+        color: #fff
+
+    &__phone-number
+        +light
+        padding: 12px 31px
+        background: #886239
+        border-radius: 100px
+
+    &__nav
+        width: 100%
+        margin-top: 15px
+        border-top: 1px solid #fff
+        border-bottom: 1px solid #fff
+
+    &__burger
+        padding: 0
+        margin: 0
+        background: #00000000
+        display: none
+
+    &__menu-list
+        +light
+        line-height: 19px
+        justify-content: space-evenly
+        display: flex
+        padding: 25px 0
+
+    &__menu-list.header__menu-list--active
+        transform: translateY(0%)
+        transition: all .25s
+
+    &__title
+        +ptbold
+        text-align: center
+        margin-bottom: auto
+        font-size: 90px
+        line-height: 117px
+
+    // header__content
+    &__content
+        text-align: left
+
+    &__descr
+        +bold
+        max-width: 420px
+        font-size: 20px
+        margin-bottom: 40px
+        line-height: 140%
+
+    &__btn
+        +light
+        display: inline-block
+        text-align: center
+        padding: 20px 54px
+        background: #886239
+        font-size: 18px
+        border-radius: 100px
+
+    &__arrow
+        text-align: center
+        margin-bottom: 15px
+
+.main
+// direction
+.direction
+    margin: 100px 0 100px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(4 ,1fr)
+        grid-gap: 25px
+    &__item
+        display: flex
+        min-width: 250px
+        flex-direction: column
+        background: #ffffff
+
+    &__img
+        display: block
+
+    &__name
+        +light
+        line-height: 19px
+        padding: 19px 0 19px 12px
+        border: 1px #D9D9DE solid
+        border-top: none
+
+// travel
+.travel
+    padding: 30px 0 50px
+
+    background: url('../image/content/travel-bg.png')
+    width: 100%
+    height: 100%
+    background-position: top center
+    background-size: cover
+    background-repeat: no-repeat
+    color: #fff
+
+    &__title
+        +normal
+        font-size: 36px
+        line-height: 46px
+        text-align: center
+
+    &__info
+        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-gap: 50px
+
+    &__item
+        text-align: left
+
+    &__text
+        +light
+        margin-top: 15px
+        max-width: 230px
+
+//popular
+
+.popular
+    margin: 100px 0
+
+    &__title
+        +bold
+        margin-bottom: 40px
+        text-align: center
+        font-size: 36px
+        line-height: 42px
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-template-rows: repeat(4,1fr)
+        grid-gap: 32px
+        padding-bottom: 85px
+        border-bottom: 1px solid #D9D9DE
+        text-align: left
+
+    &__link
+        color: #fff
+        padding: 16px 24px 19px
+        min-height: 256px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+
+    &__link:nth-child(6),
+    &__link:nth-child(3)
+        grid-column: span 2
+        grid-row: span 2
+
+    &__title-link
+        +normal
+        font-size: 18px
+        line-height: 130%
+        margin-bottom: 15px
+
+    &__country,
+        margin-bottom: 15px
+    &__day
+        +light
+        margin-bottom: auto
+
+    &__price
+        +bold
+
+.map
+    margin-bottom: 100px
+    &__title
+        +normal
+        font-size: 36px
+        line-height: 130%
+        text-align: center
+    &__iframe
+        margin-top: 50px
+
+.tour
+    margin-bottom: 100px
+
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        grid-gap: 32px
+        justify-content: space-between
+        align-items: center
+
+    &__info
+        text-align: left
+
+    &__title
+        margin-bottom: 25px
+        +normal
+        font-size: 36px
+        line-height: 42px
+
+    &__text
+        +light
+        font-size: 18px
+        line-height: 25px
+        margin-bottom: 35px
+
+    &__link-more
+        +light
+        line-height: 19px
+        text-decoration: underline
+        color: #C4C4C4
+
+    &__popup
+        position: relative
+        background: black
+        background-image: url('../image/content/tour-1.png')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__btn-play
+        position: absolute
+        background: #000
+
+// gallery
+.gallery
+    padding: 50px 0 100px
+    background: #886239
+    color: #fff
+
+    &__nav
+        margin: 0px 0 36px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__title
+        +normal
+
+    &__menu-link
+        +light
+        align-items: center
+        text-decoration: underline
+        margin-right: 55px
+
+    &__menu
+        justify-content: center
+        align-items: center
+        display: flex
+
+// Слайдер
+.slick-slider
+    display: flex
+    min-width: 0 // Всегда вкл
+
+// Ограничивающая оболочка 
+.slick-list
+    overflow: hidden // Всегда вкл
+
+// Лента слайдов 
+.slick-track
+    display: flex // Всегда вкл
+
+// Конкретный слайдер
+.slider
+    position: relative // Всегда вкл
+    padding: 0px 0px// Отступы по бокам
+
+.slider__item
+    display: grid
+    flex-wrap: wrap
+    grid-template-columns: repeat(3,1fr)
+    grid-template-rows: repeat(2,1fr)
+    grid-gap: 30px
+
+.button-nav .slick-arrow
+    font-size: 0 // Выкл ширифт на кнопках
+    width: 44px // Ширина конпок
+    height: 44px // Высота кнопок
+    border: 1px solid #fff
+    border-radius: 50px
+    &:hover
+        transform: scale(0.95)
+
+.button-nav .slick-prev // Конкретные кнопки назад
+    background: url('../image/arrow-prev.svg')
+    background-repeat: no-repeat
+    background-position: center
+    margin-right: 16px
+
+.button-nav .slick-next // Конкретные кнопки вперед
+    background: url('../image/arrow-next.svg')
+    background-repeat: no-repeat
+    background-position: center
+
+.gallery__link
+    min-height: 256px
+    min-width: 350px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+//premium
+.premium
+    &__wrap
+        +light
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__title
+        margin: 100px 0 77px
+
+    &__texts
+        column-count: 2
+        column-gap: 46px
+        padding-bottom: 50px
+        margin-bottom: 50px
+        border-bottom: 1px solid #D9D9DE
+
+    &__text
+        margin-bottom: 15px
+
+    &,.premium__text span // bold word
+        font-size: 18px
+        +bold
+        line-height: 25px
+
+    &__info
+        align-items: center
+        display: grid
+        grid-template-columns: repeat(5,2fr)
+        grid-gap: 70px
+
+    &__info-item
+        +ptbold
+        text-align: center
+        color: #886239
+
+        &:nth-child(4n)
+            min-width: 270px
+
+    &__info-text
+        +normal
+        text-align: center
+        align-items: center
+        display: block
+        font-size: 20px
+        color: #1F1E1E
+
+//bookink
+.booking
+    margin-top: 100px
+    background: #EAEAEA
+    padding: 75px 0
+
+    &__title
+    +bold
+    text-align: center
+    font-size: 36px
+    line-height: 48px
+
+    &__form
+        +light
+        margin: 50px 0 80px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: center
+
+    &__input
+        padding: 11px 0 11px 14px
+        min-width: 256px
+        height: 44px
+        border: 1px solid #D9D9DE
+
+    &__area::placeholder
+        color: #C4C4C4
+
+    &__area
+        resize: none
+        border: 1px solid #D9D9DE
+        padding: 14px 0 0 14px
+        margin: 30px 0 70px
+        width: 100%
+        min-width: 200px
+        height: 112px
+
+    &__input::placeholder
+        color: #C4C4C4
+
+    &__btn
+        +light
+        font-size: 18px
+        padding: 19px 65px
+        background: #886239
+        border-radius: 100px
+
+    &__lable
+        +light
+        color: #1F1E1E
+        display: flex
+        text-decoration: underline
+        align-items: center
+        position: relative
+
+    &__checkbox
+        cursor: pointer
+        position: absolute
+        width: 26px
+        height: 26px
+        left: -45px
+
+//footer
+.footer
+    padding: 80px 0
+    background: #1F1E1E
+
+    &__wrap
+        align-items: center
+
+    &__items
+        +light
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        grid-gap: 30px
+        justify-items: center
+        color: #ffffffe2
+        margin-top: 50px
+        line-height: 18px
+        font-size: 14px
+
+    &__item-title
+        +normal
+        margin-bottom: 7px
+        font-size: 14px
+        line-height: 18px
+
+    &__info
+        width: 225px
+
+    &__link
+        text-decoration: underline
+
+    &__adress
+        width: 164px
+
+    &__contacts
+        width: 207px
+
+@media screen and ( max-width:1300px)
+
+    //main
+    // discription
+    .direction__wrap
+        grid-template-columns: repeat(3 ,1fr)
+        grid-gap: 10px
+
+    .adapiv
+        display: none
+
+@media screen and ( max-width:1100px)
+    //slider
+    .slider__item
+        display: grid
+        flex-wrap: wrap
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: repeat(2,1fr)
+        grid-gap: 15px
+
+    // gallery
+    .gallery__link
+        grid-column: span 1
+        grid-row: span 1
+
+    // premium
+    .premium
+        &__info
+            grid-template-columns: repeat(4,1fr)
+            grid-gap: 30px
+
+@media screen and ( max-width:950px)
+
+    //main popular
+    .popular
+        &__items
+            grid-template-columns: repeat(2,1fr)
+            grid-template-rows: repeat(6,1fr)
+            grid-gap: 15px
+        &__link:nth-child(6),
+        &__link:nth-child(3)
+            grid-column: span 2
+            grid-row: span 1
+
+@media screen and ( max-width:850px)
+
+    // main discription
+    .direction__wrap
+        grid-template-columns: repeat(2 ,1fr)
+        grid-gap: 10px
+
+    //travel
+    .travel
+        &__info
+            margin-top: 50px
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            grid-gap: 40px
+        &__item
+            text-align: center
+        &__text
+            text-align: center
+
+@media screen and ( max-width:800px)
+    //header
+    .header
+        &__cta
+            display: none
+
+    // premium
+    .premium
+        &__info
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 20px
+
+@media screen and ( max-width:750px)
+    //slider
+    .slider__item
+        display: grid
+        flex-wrap: wrap
+        grid-template-columns: repeat(1,1fr)
+        grid-template-rows: repeat(1,1fr)
+        grid-gap: 10px
+
+    .gallery__link
+        grid-column: span 1
+        grid-row: span 1
+
+    .gallery
+        &__nav
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &__menu
+            display: flex
+            flex-direction: column
+        &__menu-link
+            margin: 10px 0
+
+    //booking
+    .booking
+        margin-top: 40px
+        padding: 40px 0
+
+        &__title
+            font-size: 25px
+            text-decoration: none
+
+        &__form
+            margin: 50px 0 40px
+
+        &__area
+            margin: 30px 0 30px
+
+        &__lable
+            margin-left: 50px
+            margin-top: 50px
+
+@media screen and ( max-width:710px)
+    //main tour
+    .tour
+        &__wrap
+            grid-template-columns: repeat(1,1fr)
+            grid-gap: 15px
+        &__popup
+            min-height: 300px
+
+    // //footer
+    .footer
+        &__items
+            grid-template-columns: repeat(2,1fr)
+
+@media screen and ( max-width:600px)
+    // main discription
+    .direction
+        margin: 50px 0 50px
+
+        &__wrap
+            grid-template-columns: repeat(1 ,1fr)
+            grid-gap: 10px
+
+    //premium
+    .premium
+        &__title
+            margin: 50px 0
+        &__texts
+            column-count: 1
+            padding-bottom: 20px
+            margin-bottom: 20px
+            border-bottom: 1px solid #D9D9DE
+
+@media screen and ( max-width:560px)
+    //header
+    .header
+        &__top
+            justify-content: space-between
+
+        &__logo
+            width: 100%
+            margin-bottom: 30px
+
+        &__nav
+            border: 0
+
+        &__burger
+            display: inline-block
+
+        &__menu-list
+            position: absolute
+            left: 0
+            right: 0
+            transform: translateY(-200%)
+            background: #886239
+            text-align: center
+            display: block
+
+        &__menu-item
+            padding: 10px 0
+
+        &__title
+            font-size: 50px
+
+    // //main travel
+    .travel
+        &__info
+            margin-top: 50px
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 25px
+            justify-items: center
+
+@media screen and ( max-width:470px)
+
+    //header
+    .header
+    &__descr
+        font-size: 14px
+
+    //travel
+    .travel
+        &__info
+            margin-top: 50px
+            display: grid
+            grid-template-columns: repeat(1,1fr)
+            grid-gap: 50px
+            justify-items: center
+
+    //main popular
+    .popular
+        margin: 40px 0
+        &__items
+            grid-template-columns: repeat(1,1fr)
+            grid-template-rows: repeat(1,1fr)
+            padding-bottom: 40px
+            grid-gap: 15px
+        &__link:nth-child(6),
+        &__link:nth-child(3)
+            grid-column: span 1
+            grid-row: span 1
+
+    //gallery
+    .gallery
+        &__menu
+            display: flex
+            flex-direction: column
+
+    // premium
+    .premium
+        &__info
+            grid-template-columns: repeat(1,1fr)
+            text-align: left
+            grid-gap: 20px
+
+        &__info-item:nth-child(4n)
+            min-width: 0px
+
+    //booking
+    .booking
+
+        &__input
+            min-width: 0
+            width: 100%
+        &__btn
+            padding: 10px 30px
+    //footer
+    .footer
+        &__items
+            grid-template-columns: repeat(1,1fr)

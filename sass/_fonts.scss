@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+@mixin light {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin normal {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin bold {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin ptbold {
+    font-family: PT Serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+}
