@@ -46,6 +46,7 @@
         border-radius: 100px
 
     &__nav
+        position: relative
         width: 100%
         margin-top: 15px
         border-top: 1px solid #fff
@@ -74,6 +75,19 @@
         margin-bottom: auto
         font-size: 90px
         line-height: 117px
+
+    &__burger-close
+        position: absolute
+        z-index: 2
+        top: 0
+        right: 0
+        padding: 0
+        margin: 0
+        background: #00000000
+        display: none
+
+        &:hover
+            background: #ffffff6b
 
     // header__content
     &__content
@@ -661,14 +675,21 @@
         &__burger
             display: inline-block
 
+        &__burger-close
+            display: inline
+
         &__menu-list
-            position: absolute
+            z-index: 5
+            position: fixed
             left: 0
             right: 0
+            top: 0
+            bottom: 0
             transform: translateY(-200%)
-            background: #886239
+            background: rgba(136, 98, 57,.95)
             text-align: center
             display: block
+            box-shadow: 0px 0px 60px #000000
 
         &__menu-item
             padding: 10px 0

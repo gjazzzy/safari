@@ -9,7 +9,7 @@ $(document).ready(function () {
     speed: 1000, // Скорость перелистываться анимации
     easing: 'easer', //Анимация перелистыванья
     infinite: true, // Бесконечность слайдера
-    autoplay: false, // Авто-переключение
+    autoplay: true, // Авто-переключение
     autoplaySpeed: 1000, // Перелистыванье авто
     initialSlide: 0, // слайд начало
     pauseOnFocus: false, // Пауза при клике на слайд
@@ -50,6 +50,11 @@ $(document).ready(function () {
 });
 
 $('.header__burger').on('click',function () { 
+  $('.header__menu-list').toggleClass('header__menu-list--active');
+  
+});
+
+$('.header__burger-close').on('click',function () { 
   $('.header__menu-list').toggleClass('header__menu-list--active');
   
 });
